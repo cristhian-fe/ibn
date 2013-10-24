@@ -1,0 +1,137 @@
+.nspMainPortalMode7 {
+    position: relative;
+    overflow: hidden;
+}
+.nspMainPortalMode7 .nspArtsScroll {
+    width: 20000px!important;
+}
+.nspMainPortalMode7 .nspArts {
+    width: 100%;
+}
+.nspMainPortalMode7 .nspImages {
+    padding: 0 46px;
+}
+.nspMainPortalMode7 .nspArts,
+.nspMainPortalMode7 .nspArt {
+    overflow: hidden
+}
+.nspMainPortalMode7 .nspArt {
+    float: left;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+        -ms-box-sizing: content-box;
+         -o-box-sizing: content-box;
+            box-sizing: content-box;
+}
+.nspMainPortalMode7 .nspArt img {
+    margin: 0!important;
+}
+.nspMainPortalMode7 .nspArt .nspImageGallery a {
+    display: block;
+    overflow: hidden;
+}
+.nspMainPortalMode7 .nspArt:hover {
+    cursor: pointer
+}
+.nspMainPortalMode7 .nspArt:hover .nspHeader a {
+    color: #fb5a29
+}
+.nspMainPortalMode7 .nspHeader {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 5px 0!important;
+    color: #b6b6b6;
+    font-size: 13px;
+    font-weight: 600;
+}
+.nspMainPortalMode7 .nspHeader a {
+    color: #b6b6b6!important;
+}
+.nspMainPortalMode7 .nspHeader a:active,
+.nspMainPortalMode7 .nspHeader a:focus,
+.nspMainPortalMode7 .nspHeader a:hover {
+    color: #fff!important;
+}
+.nspMainPortalMode7 .nspText {
+	color: #696969;
+	font-size: 11px;
+}
+.nspMainPortalMode7 .nspArt {
+	background: #2b2b2b;
+	border: 1px solid #2a2a2a;
+	-webkit-border-radius: 1px;
+	   -moz-border-radius: 1px;
+	        border-radius: 1px;
+	-webkit-box-shadow: inset 0 0 27px rgba(0, 0, 0, 0.75);
+	   -moz-box-shadow: inset 0 0 27px rgba(0, 0, 0, 0.75);
+	    -ms-box-shadow: inset 0 0 27px rgba(0, 0, 0, 0.75);
+	     -o-box-shadow: inset 0 0 27px rgba(0, 0, 0, 0.75);
+	        box-shadow: inset 0 0 27px rgba(0, 0, 0, 0.75);
+	margin-right: 25px;
+    padding: 0;
+    -webkit-transition: background .3s ease-out;
+       -moz-transition: background .3s ease-out;
+        -ms-transition: background .3s ease-out;
+         -o-transition: background .3s ease-out;
+            transition: background .3s ease-out;
+}
+.nspMainPortalMode7 .nspArt:hover {
+	background: #363636;
+}
+.nspMainPortalMode7 .nspArt > div {
+    padding: 0;
+    position: relative;
+}
+.nspMainPortalMode7 .nspArt > div > div {
+    padding: 0
+}
+.nspMainPortalMode7 .nspPrev,
+.nspMainPortalMode7 .nspNext {
+    height: 26px;
+    width: 26px;
+    display: block;
+    background: transparent url('../images/nsp_portal_mode_7_interface.png') no-repeat 0 0;
+    text-indent: -999em;
+    margin-top: -13px;
+    cursor: pointer;
+}
+.nspMainPortalMode7 .nspPrev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+}
+.nspMainPortalMode7 .nspNext {
+    background-position: -26px 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+}
+.nspMainPortalMode7 .nspPrev:hover {
+    background-position: 0 -26px
+}
+.nspMainPortalMode7 .nspNext:hover {
+    background-position: -26px -26px
+}
+.nspMainPortalMode7::selection,
+.nspMainPortalMode7::selection {
+    background: transparent!important
+}
+.nspMainPortalMode7::-moz-selection,
+.nspMainPortalMode7::-moz-selection {
+    background: transparent!important
+}
+.nspMainPortalMode7::-webkit-selection,
+.nspMainPortalMode7::-webkit-selection {
+    background: transparent!important
+}
+/* make element unvisible */
+.nspMainPortalMode7 .unvisible {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}

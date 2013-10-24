@@ -1,0 +1,232 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Tabs
+ * @version         3.3.5
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+@import "../../nnframework/less/init.less";
+
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/tabs/old.min.css
+ */
+
+div.nn_tabs_nav {
+	display: block;
+	clear: left;
+	margin: 5px 0 0 0;
+	padding: 0 10px;
+	line-height: 1em;
+	zoom: 1; // Fix for IE height issue
+}
+div.nn_tabs_nav ul.nn_tabs_tabs {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	list-style-image: none !important;
+	background: none !important;
+}
+div.nn_tabs_nav li.nn_tabs_tab {
+	float: left;
+	margin: 5px 2px 0 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	list-style-image: none !important;
+	background: none !important;
+}
+div.nn_tabs_nav li.nn_tabs_tab.active {
+	margin-top: 0 !important;
+}
+// Tabs
+div.nn_tabs_nav li.nn_tabs_tab a,
+div.nn_tabs_nav li.nn_tabs_tab a:link,
+div.nn_tabs_nav li.nn_tabs_tab a:visited,
+div.nn_tabs_nav li.nn_tabs_tab a:active,
+div.nn_tabs_nav li.nn_tabs_tab a:hover {
+	color: #666666;
+	outline: 0;
+	text-decoration: none;
+}
+div.nn_tabs_nav li.nn_tabs_tab a,
+div.nn_tabs_nav li.nn_tabs_tab a:hover {
+	display: block;
+	width: auto;
+	_width: 0%;
+	padding: 5px 5px 0 5px;
+	height: 20px;
+	_height: 25px;
+	font-size: 14px;
+	line-height: 1em !important;
+	font-weight: bold;
+	white-space: nowrap;
+	border: solid 1px #B4B4B4;
+	border-bottom: none;
+	text-decoration: none !important;
+	#gradient > .vertical(@white, @white);
+	.border-radius(10px 10px 0 0);
+}
+
+@bgcolor: @btnPrimaryBackground;
+// Active state
+div.nn_tabs_nav li.nn_tabs_tab.active a,
+div.nn_tabs_nav li.nn_tabs_tab.active a:hover {
+	color: @white;
+	#gradient > .vertical(lighten(@bgcolor, 15%), lighten(@bgcolor, 0%));
+}
+div.nn_tabs_nav li.nn_tabs_tab.active a {
+	padding-bottom: 5px;
+}
+// Hover state
+div.nn_tabs_nav li.nn_tabs_tab a:hover {
+	color: @grayDark;
+	#gradient > .vertical(lighten(@bgcolor, 30%), lighten(@bgcolor, 20%));
+}
+
+// Content area
+div.nn_tabs_content,
+div.nn_tabs_content > div,
+div.nn_tabs_content div.nn_tabs_item {
+	position: relative !important;
+	overflow: hidden !important;
+}
+div.nn_tabs_content {
+	margin-top: -1px;
+	clear: left;
+	padding: 10px 20px;
+	border: 1px solid #B4B4B4;
+	.border-radius(10px);
+}
+
+// STYLING FOR IF JAVASCRIPT FAILS
+div.nn_tabs_noscript div.nn_tabs_content {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+// EXTRA STYLING
+
+// Style: blue / primary
+@bgcolor_blue: @btnPrimaryBackground;
+// Normal state
+div.nn_tabs_nav li.nn_tabs_tab.blue a,
+div.nn_tabs_nav li.nn_tabs_tab.primary a {
+	#gradient > .vertical(lighten(@bgcolor_blue, 40%), lighten(@bgcolor_blue, 30%));
+}
+// Hover state
+div.nn_tabs_nav li.nn_tabs_tab.blue a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.primary a:hover {
+	#gradient > .vertical(lighten(@bgcolor_blue, 30%), lighten(@bgcolor_blue, 15%));
+}
+// Active state
+div.nn_tabs_nav li.nn_tabs_tab.active.blue a,
+div.nn_tabs_nav li.nn_tabs_tab.active.blue a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.active.primary a,
+div.nn_tabs_nav li.nn_tabs_tab.active.primary a:hover {
+	#gradient > .vertical(lighten(@bgcolor_blue, 15%), lighten(@bgcolor_blue, 0%));
+}
+
+// Style: info
+@bgcolor_info: @btnInfoBackgroundHighlight;
+// Normal state
+div.nn_tabs_nav li.nn_tabs_tab.info a {
+	#gradient > .vertical(lighten(@bgcolor_info, 40%), lighten(@bgcolor_info, 30%));
+}
+// Hover state
+div.nn_tabs_nav li.nn_tabs_tab.info a:hover {
+	#gradient > .vertical(lighten(@bgcolor_info, 30%), lighten(@bgcolor_info, 15%));
+}
+// Active state
+div.nn_tabs_nav li.nn_tabs_tab.active.info a,
+div.nn_tabs_nav li.nn_tabs_tab.active.info a:hover {
+	#gradient > .vertical(lighten(@bgcolor_info, 15%), lighten(@bgcolor_info, 0%));
+}
+
+// Style: green / success
+@bgcolor_green: @btnSuccessBackgroundHighlight;
+// Normal state
+div.nn_tabs_nav li.nn_tabs_tab.green a,
+div.nn_tabs_nav li.nn_tabs_tab.success a {
+	#gradient > .vertical(lighten(@bgcolor_green, 40%), lighten(@bgcolor_green, 30%));
+}
+// Hover state
+div.nn_tabs_nav li.nn_tabs_tab.green a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.success a:hover {
+	#gradient > .vertical(lighten(@bgcolor_green, 30%), lighten(@bgcolor_green, 15%));
+}
+// Active state
+div.nn_tabs_nav li.nn_tabs_tab.active.green a,
+div.nn_tabs_nav li.nn_tabs_tab.active.green a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.active.success a,
+div.nn_tabs_nav li.nn_tabs_tab.active.success a:hover {
+	#gradient > .vertical(lighten(@bgcolor_green, 15%), lighten(@bgcolor_green, 0%));
+}
+
+// Style: orange / warning
+@bgcolor_orange: @btnWarningBackgroundHighlight;
+// Normal state
+div.nn_tabs_nav li.nn_tabs_tab.orange a,
+div.nn_tabs_nav li.nn_tabs_tab.warning a {
+	#gradient > .vertical(lighten(@bgcolor_orange, 40%), lighten(@bgcolor_orange, 30%));
+}
+// Hover state
+div.nn_tabs_nav li.nn_tabs_tab.orange a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.warning a:hover {
+	#gradient > .vertical(lighten(@bgcolor_orange, 30%), lighten(@bgcolor_orange, 15%));
+}
+// Active state
+div.nn_tabs_nav li.nn_tabs_tab.active.orange a,
+div.nn_tabs_nav li.nn_tabs_tab.active.orange a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.active.warning a,
+div.nn_tabs_nav li.nn_tabs_tab.active.warning a:hover {
+	#gradient > .vertical(lighten(@bgcolor_orange, 15%), lighten(@bgcolor_orange, 0%));
+}
+
+// Style: red / danger / error
+@bgcolor_red: @btnDangerBackgroundHighlight;
+// Normal state
+div.nn_tabs_nav li.nn_tabs_tab.red a,
+div.nn_tabs_nav li.nn_tabs_tab.danger a,
+div.nn_tabs_nav li.nn_tabs_tab.error a {
+	#gradient > .vertical(lighten(@bgcolor_red, 40%), lighten(@bgcolor_red, 30%));
+}
+// Hover state
+div.nn_tabs_nav li.nn_tabs_tab.red a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.danger a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.error a:hover {
+	#gradient > .vertical(lighten(@bgcolor_red, 30%), lighten(@bgcolor_red, 15%));
+}
+// Active state
+div.nn_tabs_nav li.nn_tabs_tab.active.red a,
+div.nn_tabs_nav li.nn_tabs_tab.active.red a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.active.danger a,
+div.nn_tabs_nav li.nn_tabs_tab.active.danger a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.active.error a,
+div.nn_tabs_nav li.nn_tabs_tab.active.error a:hover {
+	#gradient > .vertical(lighten(@bgcolor_red, 15%), lighten(@bgcolor_red, 0%));
+}
+
+// Style: gray / grey
+@bgcolor_grey: #777777;
+// Normal state
+div.nn_tabs_nav li.nn_tabs_tab.gray a,
+div.nn_tabs_nav li.nn_tabs_tab.grey a {
+	#gradient > .vertical(lighten(@bgcolor_grey, 40%), lighten(@bgcolor_grey, 30%));
+}
+// Hover state
+div.nn_tabs_nav li.nn_tabs_tab.gray a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.grey a:hover {
+	#gradient > .vertical(lighten(@bgcolor_grey, 30%), lighten(@bgcolor_grey, 15%));
+}
+// Active state
+div.nn_tabs_nav li.nn_tabs_tab.active.gray a,
+div.nn_tabs_nav li.nn_tabs_tab.active.gray a:hover,
+div.nn_tabs_nav li.nn_tabs_tab.active.grey a,
+div.nn_tabs_nav li.nn_tabs_tab.active.grey a:hover {
+	#gradient > .vertical(lighten(@bgcolor_grey, 15%), lighten(@bgcolor_grey, 0%));
+}

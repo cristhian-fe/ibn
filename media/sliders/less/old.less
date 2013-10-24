@@ -1,0 +1,271 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Sliders
+ * @version         3.3.1
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+@import "../../nnframework/less/init.less";
+
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/sliders/old.min.css
+ */
+
+div.nn_sliders_slider {
+	display: block;
+	clear: left;
+	margin: 2px 0 0 0 !important;
+	padding: 0;
+	line-height: 1em;
+	background: none;
+}
+
+div.nn_sliders_slider.nn_sliders_slider.active {
+}
+
+// Slides
+div.nn_sliders_slider a,
+div.nn_sliders_slider a:link,
+div.nn_sliders_slider a:visited,
+div.nn_sliders_slider a:active,
+div.nn_sliders_slider a:hover {
+	color: #666666;
+	outline: 0;
+	text-decoration: none;
+}
+
+div.nn_sliders_slider a,
+div.nn_sliders_slider a:hover {
+	display: block;
+	width: auto;
+	_width: 0%; // IE hack
+	font-size: 14px;
+	line-height: 1em !important;
+	font-weight: bold;
+	border: solid 1px #B4B4B4;
+	text-decoration: none !important;
+	#gradient > .vertical(@white, @white);
+	.border-radius(10px);
+	/* for dynamic height titles */
+	padding: 5px 10px;
+	/* for fixed height titles*/
+	/*padding: 5px 10px 0 10px;
+	height: 20px;
+	_height: 25px;
+	white-space: nowrap;*/
+}
+
+@bgcolor: @btnPrimaryBackground;
+// Slides: Hover state
+div.nn_sliders_slider a:hover {
+	color: @grayDark;
+	#gradient > .vertical(lighten(@bgcolor, 30%), lighten(@bgcolor, 20%));
+}
+// Slides: Active state
+div.nn_sliders_slider.active a,
+div.nn_sliders_slider.active a:hover {
+	color: @white;
+	#gradient > .vertical(lighten(@bgcolor, 15%), lighten(@bgcolor, 0%));
+	.border-radius(10px 10px 0 0);
+}
+
+// Content area
+div.nn_sliders_content_wrapper,
+div.nn_sliders_content_wrapper > div,
+div.nn_sliders_content_wrapper div.nn_sliders_content,
+div.nn_sliders_content_wrapper div.nn_sliders_content > div,
+div.nn_sliders_content_wrapper div.nn_sliders_item {
+	position: relative !important;
+	overflow: hidden !important;
+}
+
+div.nn_sliders_content_wrapper {
+	clear: left;
+	margin-top: -1px;
+	padding: 0;
+}
+
+div.nn_sliders_content_wrapper div.nn_sliders_content {
+	clear: both;
+	padding: 0;
+	border: 1px solid #B4B4B4;
+}
+
+div.nn_sliders_container div.nn_sliders_content_wrapper div.nn_sliders_content {
+	.border-radius(0 0 10px 10px);
+}
+
+div.nn_sliders_content_wrapper div.nn_sliders_item {
+	padding: 10px 20px;
+}
+
+// INDENTING
+div.nn_sliders_slider.noindent,
+div.nn_sliders_slider.indentcontent {
+	// default
+}
+
+div.nn_sliders_slider.indent,
+div.nn_sliders_slider.indenttitle {
+	padding: 0 10px;
+}
+
+div.nn_sliders_slider.noindent.active a,
+div.nn_sliders_slider.noindent.active a:hover,
+div.nn_sliders_slider.indenttitle.active a,
+div.nn_sliders_slider.indenttitle.active a:hover {
+	// default
+}
+
+div.nn_sliders_container div.nn_sliders_slider.indentcontent.active a,
+div.nn_sliders_container div.nn_sliders_slider.indentcontent.active a:hover {
+	.border-radius(10px);
+}
+
+div.nn_sliders_content_wrapper.noindent,
+div.nn_sliders_content_wrapper.indenttitle {
+	// default
+}
+
+div.nn_sliders_content_wrapper.indent,
+div.nn_sliders_content_wrapper.indentcontent {
+	padding: 0 10px;
+}
+
+div.nn_sliders_content_wrapper.noindent div.nn_sliders_content,
+div.nn_sliders_content_wrapper.indentcontent div.nn_sliders_content {
+	// default
+}
+
+div.nn_sliders_container div.nn_sliders_content_wrapper.indenttitle div.nn_sliders_content {
+	.border-radius(10px);
+}
+
+// STYLING FOR IF JAVASCRIPT FAILS
+div.nn_sliders_noscript div.nn_sliders_content,
+div.nn_sliders_noscript div.nn_sliders_item {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+// Style: blue / primary
+@bgcolor_blue: @btnPrimaryBackground;
+// Normal state
+div.nn_sliders_slider.blue a,
+div.nn_sliders_slider.primary a {
+	#gradient > .vertical(lighten(@bgcolor_blue, 40%), lighten(@bgcolor_blue, 30%));
+}
+// Hover state
+div.nn_sliders_slider.blue a:hover,
+div.nn_sliders_slider.primary a:hover {
+	#gradient > .vertical(lighten(@bgcolor_blue, 30%), lighten(@bgcolor_blue, 15%));
+}
+// Active state
+div.nn_sliders_slider.active.blue a,
+div.nn_sliders_slider.active.blue a:hover,
+div.nn_sliders_slider.active.primary a,
+div.nn_sliders_slider.active.primary a:hover {
+	#gradient > .vertical(lighten(@bgcolor_blue, 15%), lighten(@bgcolor_blue, 0%));
+}
+
+// Style: info
+@bgcolor_info: @btnInfoBackgroundHighlight;
+// Normal state
+div.nn_sliders_slider.info a {
+	#gradient > .vertical(lighten(@bgcolor_info, 40%), lighten(@bgcolor_info, 30%));
+}
+// Hover state
+div.nn_sliders_slider.info a:hover {
+	#gradient > .vertical(lighten(@bgcolor_info, 30%), lighten(@bgcolor_info, 15%));
+}
+// Active state
+div.nn_sliders_slider.active.info a,
+div.nn_sliders_slider.active.info a:hover {
+	#gradient > .vertical(lighten(@bgcolor_info, 15%), lighten(@bgcolor_info, 0%));
+}
+
+// Style: green / success
+@bgcolor_green: @btnSuccessBackgroundHighlight;
+// Normal state
+div.nn_sliders_slider.green a,
+div.nn_sliders_slider.success a {
+	#gradient > .vertical(lighten(@bgcolor_green, 40%), lighten(@bgcolor_green, 30%));
+}
+// Hover state
+div.nn_sliders_slider.green a:hover,
+div.nn_sliders_slider.success a:hover {
+	#gradient > .vertical(lighten(@bgcolor_green, 30%), lighten(@bgcolor_green, 15%));
+}
+// Active state
+div.nn_sliders_slider.active.green a,
+div.nn_sliders_slider.active.green a:hover,
+div.nn_sliders_slider.active.success a,
+div.nn_sliders_slider.active.success a:hover {
+	#gradient > .vertical(lighten(@bgcolor_green, 15%), lighten(@bgcolor_green, 0%));
+}
+
+// Style: orange / warning
+@bgcolor_orange: @btnWarningBackgroundHighlight;
+// Normal state
+div.nn_sliders_slider.orange a,
+div.nn_sliders_slider.warning a {
+	#gradient > .vertical(lighten(@bgcolor_orange, 40%), lighten(@bgcolor_orange, 30%));
+}
+// Hover state
+div.nn_sliders_slider.orange a:hover,
+div.nn_sliders_slider.warning a:hover {
+	#gradient > .vertical(lighten(@bgcolor_orange, 30%), lighten(@bgcolor_orange, 15%));
+}
+// Active state
+div.nn_sliders_slider.active.orange a,
+div.nn_sliders_slider.active.orange a:hover,
+div.nn_sliders_slider.active.warning a,
+div.nn_sliders_slider.active.warning a:hover {
+	#gradient > .vertical(lighten(@bgcolor_orange, 15%), lighten(@bgcolor_orange, 0%));
+}
+
+// Style: red / danger
+@bgcolor_red: @btnDangerBackgroundHighlight;
+// Normal state
+div.nn_sliders_slider.red a,
+div.nn_sliders_slider.danger a {
+	#gradient > .vertical(lighten(@bgcolor_red, 40%), lighten(@bgcolor_red, 30%));
+}
+// Hover state
+div.nn_sliders_slider.red a:hover,
+div.nn_sliders_slider.danger a:hover {
+	#gradient > .vertical(lighten(@bgcolor_red, 30%), lighten(@bgcolor_red, 15%));
+}
+// Active state
+div.nn_sliders_slider.active.red a,
+div.nn_sliders_slider.active.red a:hover,
+div.nn_sliders_slider.active.danger a,
+div.nn_sliders_slider.active.danger a:hover {
+	#gradient > .vertical(lighten(@bgcolor_red, 15%), lighten(@bgcolor_red, 0%));
+}
+
+// Style: gray / grey
+@bgcolor_grey: #777777;
+// Normal state
+div.nn_sliders_slider.gray a
+div.nn_sliders_slider.grey a {
+	#gradient > .vertical(lighten(@bgcolor_grey, 40%), lighten(@bgcolor_grey, 30%));
+}
+// Hover state
+div.nn_sliders_slider.gray a:hover
+div.nn_sliders_slider.grey a:hover {
+	#gradient > .vertical(lighten(@bgcolor_grey, 30%), lighten(@bgcolor_grey, 15%));
+}
+// Active state
+div.nn_sliders_slider.active.gray a,
+div.nn_sliders_slider.active.gray a:hover,
+div.nn_sliders_slider.active.grey a,
+div.nn_sliders_slider.active.grey a:hover {
+	#gradient > .vertical(lighten(@bgcolor_grey, 15%), lighten(@bgcolor_grey, 0%));
+}

@@ -1,0 +1,232 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Tabs
+ * @version         3.3.5
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+@import "../../nnframework/less/init.less";
+
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/tabs/style.min.css
+ */
+div.nn_tabs_container {
+	> div.nn_tabs_nav {
+		display: block;
+		clear: left;
+		line-height: 1em;
+		zoom: 1; // Fix for IE height issue
+
+		> ul.nn_tabs_tabs {
+			margin: 0 !important;
+			padding: 0 !important;
+			list-style: none !important;
+			list-style-image: none !important;
+			background: none !important;
+			border-bottom: 1px solid #ddd;
+			.clearfix();
+			> li {
+				float: left;
+				margin: 0 !important;
+				margin-bottom: -1px !important;
+				padding: 0 !important;
+				list-style: none !important;
+				list-style-image: none !important;
+				background: none !important;
+				// Tabs
+				> span {
+					> a {
+						display: block;
+						margin-right: 2px;
+						padding: 8px 12px;
+						border: 1px solid transparent;
+						border-bottom-color: transparent;
+						.border-radius(4px 4px 0 0);
+						.transition-duration(.2s);
+					}
+					> a,
+					> a:link,
+					> a:visited,
+					> a:active,
+					> a:hover {
+						outline: 0;
+						line-height: 1.5em !important;
+						text-decoration: none !important;
+						color: @gray;
+					}
+
+					// Hover state
+					> a:hover {
+						background-color: #eee;
+					}
+				}
+				// Active state
+				&.active > span {
+					> a,
+					> a:hover {
+						background-color: @white;
+						border: 1px solid #ddd;
+						border-bottom-color: transparent;
+						cursor: default;
+					}
+				}
+			}
+		}
+	}
+
+	// Outline Tabs
+	&.outline_handles {
+		> div.nn_tabs_nav > ul.nn_tabs_tabs > li > span {
+			> a,
+			> a:hover, {
+				border-top-color: #ddd;
+				border-left-color: #ddd;
+				border-right-color: #ddd;
+			}
+		}
+	}
+
+	// Alignment: Right
+	&.align_right {
+		> div.nn_tabs_nav > ul.nn_tabs_tabs {
+			> li {
+				float: right;
+				> span > a {
+					margin-left: 2px;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	// Alignment: Center
+	&.align_center {
+		> div.nn_tabs_nav > ul.nn_tabs_tabs {
+			text-align: center;
+			> li {
+				float: none;
+				display: inline-block;
+				.ie7-inline-block();
+				margin-left: -1px !important;
+				margin-right: -3px !important;
+			}
+		}
+	}
+
+	// Alignment: Justify
+	&.align_justify {
+		> div.nn_tabs_nav > ul.nn_tabs_tabs {
+			text-align: center;
+			display: table;
+			width: 100%;
+			> li {
+				float: none;
+				display: table-cell;
+				> span > a {
+					margin-left: 4px;
+					margin-right: -2px;
+				}
+				&:first-child > span > a {
+					margin-left: -1px;
+				}
+				&.active a,
+				&.active a:hover {
+					border-bottom: 2px solid #fff;
+					margin-bottom: -1px;
+				}
+			}
+		}
+	}
+
+	// Content area
+	> div.nn_tabs_content {
+		margin-bottom: 18px;
+		border: 1px solid transparent;
+		border-top: 0;
+		padding: 8px 12px;
+		.border-radius(0 0 4px 4px);
+		position: relative !important;
+		overflow: hidden !important;
+		> div,
+		div.nn_tabs_item {
+			position: relative !important;
+			overflow: hidden !important;
+		}
+	}
+
+	// Outline Content
+	&.outline_content {
+		> div.nn_tabs_content {
+			border-bottom-color: #ddd;
+			border-left-color: #ddd;
+			border-right-color: #ddd;
+		}
+	}
+
+	// STYLING FOR IF JAVASCRIPT FAILS
+	&.nn_tabs_noscript div.nn_tabs_content {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	> div.nn_tabs_nav > ul.nn_tabs_tabs > li {
+		@media (max-width: 768px) {
+			&:last-child > span > a,
+			&.active:last-child > span > a {
+				border-bottom: 1px solid #ddd;
+			}
+		}
+
+		.tabColor(@name, @color) {
+			&.@{name} > span {
+				> a,
+				> a:hover {
+					border-top: 5px solid lighten(@color, 20%);
+					padding-top: 4px;
+					.border-radius(5px 5px 0 0);
+				}
+				> a:hover,
+				&.active > a {
+					border-top-color: @color;
+				}
+				@media (max-width: 768px) {
+					> a,
+					> a:hover {
+						border-top-width: 1px;
+						.border-radius(0);
+					}
+				}
+			}
+		}
+
+		// Style: blue
+		.tabColor(~'blue', @btnPrimaryBackground);
+		.tabColor(~'primary', @btnPrimaryBackground);
+
+		// Style: info
+		.tabColor(~'info', @btnInfoBackgroundHighlight);
+
+		// Style: green / success
+		.tabColor(~'green', @btnSuccessBackgroundHighlight);
+		.tabColor(~'success', @btnSuccessBackgroundHighlight);
+
+		// Style: orange / warning
+		.tabColor(~'orange', @btnWarningBackgroundHighlight);
+		.tabColor(~'warning', @btnWarningBackgroundHighlight);
+
+		// Style: red / danger
+		.tabColor(~'red', @btnDangerBackgroundHighlight);
+		.tabColor(~'danger', @btnDangerBackgroundHighlight);
+		.tabColor(~'error', @btnDangerBackgroundHighlight);
+
+		// Style: grey / gray
+		.tabColor(~'grey', #808080);
+		.tabColor(~'gray', #808080);
+	}
+}

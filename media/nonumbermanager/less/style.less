@@ -1,0 +1,239 @@
+/**
+ * NoNumber Extension Manager Admin CSS
+ *
+ * @package         NoNumber Extension Manager
+ * @version         4.2.2
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+@import "../../nnframework/less/init.less";
+
+.icon-48-nonumbermanager {
+	background: transparent url(../images/nonumbermanager.png) no-repeat 10px 9px !important;
+	text-indent: -9999px;
+}
+
+div#nnem {
+	font-size: 1.2em;
+}
+div#nnem table tbody tr td {
+	padding: 4px;
+}
+div#nnem table thead input {
+	margin-right: 4px;
+}
+div#nnem table checkbox_container {
+	height: 28px;
+}
+td.ext_name {
+	font-size: 18px;
+}
+a.nnem_link,
+a.nnem_link:hover,
+a.nolink,
+a.nolink:hover,
+div#nnem table a,
+div#nnem table a:hover {
+	text-decoration: none;
+}
+a.nolink,
+a.nolink:hover {
+	cursor: default;
+}
+table.hide_not_installed tbody tr.not_installed,
+div.has_install .all_ghosted_installselected,
+div.has_update .all_ghosted_installselected,
+div.has_update .all_ghosted_updateall,
+tr.uptodate .hide_uptodate,
+tr .installed,
+tr .not_installed,
+tr .free_installed,
+tr .pro_installed,
+tr .pro_not_installed,
+tr .pro_available,
+tr .pro_not_available,
+tr .pro_access,
+tr .pro_no_access {
+	display: none;
+}
+div.has_install .all_installselected,
+div.has_update .all_installselected,
+div.has_update .all_updateall,
+tr.installed .installed,
+tr.not_installed .not_installed,
+tr.loading .not_installed,
+tr.free_installed .installed,
+tr.pro_installed .installed,
+tr.free_installed .free_installed,
+tr.pro_installed .pro_installed,
+tr.not_installed .pro_not_installed,
+tr.free_installed .pro_not_installed,
+tr.pro_available .pro_available,
+tr.pro_not_available .pro_not_available,
+tr.pro_access .pro_access,
+tr.pro_no_access .pro_no_access {
+	display: inline !important;
+}
+tr.loading .installed,
+tr.pro_not_available .pro_access,
+tr.pro_not_available .pro_no_access {
+	display: none !important;
+}
+
+span.readmore {
+	font-style: italic;
+	text-decoration: underline;
+}
+span.readmore,
+span.group_comment:hover span.readmore_text {
+	display: inline;
+}
+span.group_comment:hover span.readmore,
+span.readmore_text {
+	display: none;
+}
+span.nnem_button {
+	display: inline-block;
+	.ie7-inline-block();
+	margin-right: 4px;
+	font-size: @baseFontSize * .846;
+	font-weight: bold;
+	line-height: 14px; // ensure proper line-height if floated
+	color: @white;
+	vertical-align: baseline;
+	text-align: center;
+	white-space: nowrap;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+	background-color: @grayLight;
+	padding: 1px 4px 2px;
+	.border-radius(3px);
+}
+div.nnem_main_buttons span.nnem_button {
+	zoom: 1;
+	margin-bottom: 4px;
+}
+a span.nnem_button {
+	display: inline-block;
+	.ie7-inline-block();
+	padding: 3px 9px;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 16px;
+	margin-bottom: 0;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	.buttonBackground(#fff, #e6e6e6, #333, 0 1px 1px rgba(255,255,255,.75));
+	border: 1px solid #bbb;
+	*border: 0; // Remove the border to prevent IE7's black border on input:focus
+	border-bottom-color: #a2a2a2;
+	.border-radius(4px);
+	.ie7-restore-left-whitespace(); // Give IE7 some love
+	.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
+}
+a:hover span.nnem_button {
+	color: #333;
+	background-color: #e6e6e6;
+	*background-color: #d9d9d9;
+}
+
+a.nolink:hover span.nnem_button {
+	cursor: default;
+	.box-shadow(~" inset 0 -5px 10px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.3)");
+}
+
+.buttons span.nnem_button {
+	display: block;
+}
+span.group_error span.nnem_button,
+span.group_comment span.nnem_button {
+	text-align: left;
+	padding: 3px 10px;
+	border-width: 1px;
+	font-weight: normal;
+	color: #999999;
+	display: block;
+}
+
+.adminlist .data_refresh a span.nnem_button {
+	.buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+}
+.all_installselected a span.nnem_button,
+.data_install a span.nnem_button {
+	.buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+.all_updateall a span.nnem_button,
+.data_update a span.nnem_button {
+	.buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+}
+.none_uninstall a span.nnem_button {
+	.buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+
+span.current_version span.nnem_button,
+span.new_version span.nnem_button {
+	min-width: 36px;
+	.border-radius(10px);
+}
+span.free_installed > span.nnem_button,
+span.pro_no_access > span.nnem_button,
+span.pro_installed > span.nnem_button,
+span.pro_access > span.nnem_button {
+	background-color: @btnInfoBackgroundHighlight;
+	min-width: 30px;
+}
+span.pro_installed > span.nnem_button,
+span.pro_access > span.nnem_button {
+	background-color: @btnSuccessBackgroundHighlight;
+}
+tr.update span.new_version span.nnem_button {
+	background-color: @btnWarningBackgroundHighlight;
+}
+
+span.group_error span.nnem_button,
+span.comment_update span.nnem_button,
+span.comment_missing span.nnem_button,
+span.comment_pro_no_access span.nnem_button,
+span.comment_old span.nnem_button {
+	background-color: @btnWarningBackground;
+	padding-left: 28px;
+	background: transparent url(../images/warning.png) no-repeat 5px 2px;
+}
+
+span.group_error span.nnem_button,
+span.group_comment span.nnem_button {
+	background-color: transparent;
+	.box-shadow(none);
+	text-shadow: none;
+	color: @textColor;
+}
+span.group_error span.nnem_button {
+  background-color: @grayLighter;
+  font-weight: bold;
+}
+
+span.group_all_ghosted span.nnem_button {
+	.opacity(30);
+}
+
+progress.loading {
+	height: 9px;
+	width: 100%;
+}
+div.clr {
+	clear: both;
+}
+
+/* Tooltips */
+.changlog-tip {
+	max-width: none !important;
+}
+
+/* Modal */
+#sbox-window.nnem_modal {
+	padding: 0;
+}

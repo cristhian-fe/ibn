@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+	<name>FaLang Package</name>
+	<author>Stéphane Bouey</author>
+	<creationDate>December 2012</creationDate>
+ 	<packagename>falang</packagename>
+	 <version>1.3.1</version>
+	 <url>http://www.faboba.com</url>
+	 <packager>Stéphane Bouey</packager>
+	 <packagerurl>http://www.faboba.com</packagerurl>
+	 <description>FaLang! Installer Package.</description>
+	 <files folder="packages">
+		 <file type="component" id="com_falang" >com_falang_131.zip</file>
+		 <file type="module" id="mod_falang" client="site">mod_falang_130.zip</file>
+		 <file type="plugin" id="falangdriver" group="system">plg_falangdriver_130.zip</file>
+	 </files>
+    <updateservers>
+        <server name="Falang Update Site" type="collection" priority="1" >http://update.faboba.com/falang/collection.xml</server>
+    </updateservers>
+	 
+</extension>

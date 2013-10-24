@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="module" method="upgrade">
+	<name>MOD_BETTERPREVIEW</name>
+	<description>MOD_BETTERPREVIEW_DESC</description>
+	<version>2.2.3FREE</version>
+	<creationDate>April 2013</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<files>
+		<filename module="mod_betterpreview">mod_betterpreview.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<!-- Parameters -->
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="description">
+				<field name="@loadlanguage" type="nn_loadlanguage" extension="mod_betterpreview" admin="1" />
+				<field name="@license" type="nn_license" extension="BETTER_PREVIEW" />
+				<field name="@version" type="nn_version" extension="BETTER_PREVIEW" xml="administrator/modules/mod_betterpreview/mod_betterpreview.xml" />
+				<field name="@dependency" type="nn_dependency"
+					label="BP_THE_SYSTEM_PLUGIN"
+					file="/plugins/system/cachecleaner/cachecleaner.php" />
+				<field name="@header" type="nn_header"
+					label="BETTER_PREVIEW"
+					description="BETTER_PREVIEW_DESC"
+					image="/mediabetterpreview/images/logo.png"
+					image_w="120" image_h="160"
+					url="http://www.nonumber.nl/betterpreview"
+					help_url="http://www.nonumber.nl/betterpreview" />
+
+				<field name="@notice_settings" type="nn_plaintext" label="BP_SETTINGS" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

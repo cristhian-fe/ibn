@@ -1,0 +1,191 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Sliders
+ * @version         3.3.1
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/sliders/style.min.css
+ */
+div.nn_sliders_container {
+  margin-bottom: 18px;
+}
+div.nn_sliders_slider {
+  display: block;
+  clear: left;
+  margin: 2px 0 0 0 !important;
+  padding: 0;
+  line-height: 1em;
+  background: none;
+}
+div.nn_sliders_slider a,
+div.nn_sliders_slider a:link,
+div.nn_sliders_slider a:visited,
+div.nn_sliders_slider a:active,
+div.nn_sliders_slider a:hover {
+  outline: 0;
+  line-height: 1.5em !important;
+  text-decoration: none !important;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+div.nn_sliders_slider a,
+div.nn_sliders_slider a:hover {
+  display: block;
+  width: auto;
+  _width: 0%;
+  border: solid 1px #e5e5e5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 8px 15px;
+}
+div.nn_sliders_slider a:hover {
+  background-color: #eeeeee;
+}
+div.nn_sliders_slider.active a,
+div.nn_sliders_slider.active a:hover {
+  background-color: #f8f8f8;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+div.nn_sliders_content_wrapper,
+div.nn_sliders_content_wrapper > div,
+div.nn_sliders_content_wrapper div.nn_sliders_content,
+div.nn_sliders_content_wrapper div.nn_sliders_content > div,
+div.nn_sliders_content_wrapper div.nn_sliders_item {
+  position: relative !important;
+  overflow: hidden !important;
+}
+div.nn_sliders_content_wrapper {
+  clear: left;
+  margin-top: -1px;
+  padding: 0;
+}
+div.nn_sliders_content_wrapper div.nn_sliders_content {
+  clear: both;
+  padding: 0;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  padding: 9px 15px;
+}
+div.nn_sliders_noscript div.nn_sliders_content,
+div.nn_sliders_noscript div.nn_sliders_item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+div.nn_sliders_slider.blue a,
+div.nn_sliders_slider.green a,
+div.nn_sliders_slider.red a,
+div.nn_sliders_slider.orange a,
+div.nn_sliders_slider.gray a,
+div.nn_sliders_slider.grey a,
+div.nn_sliders_slider.primary a,
+div.nn_sliders_slider.info a,
+div.nn_sliders_slider.success a,
+div.nn_sliders_slider.danger a,
+div.nn_sliders_slider.warning a {
+  border-top: 5px solid #e5e5e5;
+  -webkit-border-radius: 5px 5px 4px 4px;
+  -moz-border-radius: 5px 5px 4px 4px;
+  border-radius: 5px 5px 4px 4px;
+}
+div.nn_sliders_slider.blue a,
+div.nn_sliders_slider.primary a {
+  border-top-color: #74b4e8;
+}
+div.nn_sliders_slider.blue a:hover,
+div.nn_sliders_slider.blue.active a,
+div.nn_sliders_slider.primary a:hover,
+div.nn_sliders_slider.primary.active a {
+  border-top-color: #2384d3;
+}
+div.nn_sliders_slider.info a {
+  border-top-color: #6fc2da;
+}
+div.nn_sliders_slider.info a:hover,
+div.nn_sliders_slider.info.active a {
+  border-top-color: #2f96b4;
+}
+div.nn_sliders_slider.green a,
+div.nn_sliders_slider.success a {
+  border-top-color: #91c991;
+}
+div.nn_sliders_slider.green a:hover,
+div.nn_sliders_slider.green.active a,
+div.nn_sliders_slider.success a:hover,
+div.nn_sliders_slider.success.active a {
+  border-top-color: #51a351;
+}
+div.nn_sliders_slider.orange a,
+div.nn_sliders_slider.warning a {
+  border-top-color: #fbbf69;
+}
+div.nn_sliders_slider.orange a:hover,
+div.nn_sliders_slider.orange.active a,
+div.nn_sliders_slider.warning a:hover,
+div.nn_sliders_slider.warning.active a {
+  border-top-color: #f89406;
+}
+div.nn_sliders_slider.red a,
+div.nn_sliders_slider.danger a,
+div.nn_sliders_slider.error a {
+  border-top-color: #dd7a75;
+}
+div.nn_sliders_slider.red a:hover,
+div.nn_sliders_slider.red.active a,
+div.nn_sliders_slider.danger a:hover,
+div.nn_sliders_slider.danger.active a,
+div.nn_sliders_slider.error a:hover,
+div.nn_sliders_slider.error.active a {
+  border-top-color: #bd362f;
+}
+div.nn_sliders_slider.gray a,
+div.nn_sliders_slider.grey a {
+  border-top-color: #b3b3b3;
+}
+div.nn_sliders_slider.gray a:hover,
+div.nn_sliders_slider.gray.active a,
+div.nn_sliders_slider.grey a:hover,
+div.nn_sliders_slider.grey.active a {
+  border-top-color: #808080;
+}

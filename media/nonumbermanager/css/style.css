@@ -1,0 +1,427 @@
+/**
+ * NoNumber Extension Manager Admin CSS
+ *
+ * @package         NoNumber Extension Manager
+ * @version         4.2.2
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.icon-48-nonumbermanager {
+  background: transparent url(../images/nonumbermanager.png) no-repeat 10px 9px !important;
+  text-indent: -9999px;
+}
+div#nnem {
+  font-size: 1.2em;
+}
+div#nnem table tbody tr td {
+  padding: 4px;
+}
+div#nnem table thead input {
+  margin-right: 4px;
+}
+div#nnem table checkbox_container {
+  height: 28px;
+}
+td.ext_name {
+  font-size: 18px;
+}
+a.nnem_link,
+a.nnem_link:hover,
+a.nolink,
+a.nolink:hover,
+div#nnem table a,
+div#nnem table a:hover {
+  text-decoration: none;
+}
+a.nolink,
+a.nolink:hover {
+  cursor: default;
+}
+table.hide_not_installed tbody tr.not_installed,
+div.has_install .all_ghosted_installselected,
+div.has_update .all_ghosted_installselected,
+div.has_update .all_ghosted_updateall,
+tr.uptodate .hide_uptodate,
+tr .installed,
+tr .not_installed,
+tr .free_installed,
+tr .pro_installed,
+tr .pro_not_installed,
+tr .pro_available,
+tr .pro_not_available,
+tr .pro_access,
+tr .pro_no_access {
+  display: none;
+}
+div.has_install .all_installselected,
+div.has_update .all_installselected,
+div.has_update .all_updateall,
+tr.installed .installed,
+tr.not_installed .not_installed,
+tr.loading .not_installed,
+tr.free_installed .installed,
+tr.pro_installed .installed,
+tr.free_installed .free_installed,
+tr.pro_installed .pro_installed,
+tr.not_installed .pro_not_installed,
+tr.free_installed .pro_not_installed,
+tr.pro_available .pro_available,
+tr.pro_not_available .pro_not_available,
+tr.pro_access .pro_access,
+tr.pro_no_access .pro_no_access {
+  display: inline !important;
+}
+tr.loading .installed,
+tr.pro_not_available .pro_access,
+tr.pro_not_available .pro_no_access {
+  display: none !important;
+}
+span.readmore {
+  font-style: italic;
+  text-decoration: underline;
+}
+span.readmore,
+span.group_comment:hover span.readmore_text {
+  display: inline;
+}
+span.group_comment:hover span.readmore,
+span.readmore_text {
+  display: none;
+}
+span.nnem_button {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-right: 4px;
+  font-size: 10.998px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #ffffff;
+  vertical-align: baseline;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #999999;
+  padding: 1px 4px 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+div.nnem_main_buttons span.nnem_button {
+  zoom: 1;
+  margin-bottom: 4px;
+}
+a span.nnem_button {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  padding: 3px 9px;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #c0c0c0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e6e6e6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #bbb;
+  *border: 0;
+  border-bottom-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+}
+a span.nnem_button:hover,
+a span.nnem_button:active,
+a span.nnem_button.active,
+a span.nnem_button.disabled,
+a span.nnem_button[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+a span.nnem_button:active,
+a span.nnem_button.active {
+  background-color: #cdcdcd \9;
+}
+a span.nnem_button:first-child {
+  *margin-left: 0;
+}
+a:hover span.nnem_button {
+  color: #333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+a.nolink:hover span.nnem_button {
+  cursor: default;
+  -webkit-box-shadow:  inset 0 -5px 10px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.3);
+  -moz-box-shadow:  inset 0 -5px 10px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.3);
+  box-shadow:  inset 0 -5px 10px rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.3);
+}
+.buttons span.nnem_button {
+  display: block;
+}
+span.group_error span.nnem_button,
+span.group_comment span.nnem_button {
+  text-align: left;
+  padding: 3px 10px;
+  border-width: 1px;
+  font-weight: normal;
+  color: #999999;
+  display: block;
+}
+.adminlist .data_refresh a span.nnem_button {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #1d6cb0;
+  background-image: -moz-linear-gradient(top, #2384d3, #15497c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2384d3), to(#15497c));
+  background-image: -webkit-linear-gradient(top, #2384d3, #15497c);
+  background-image: -o-linear-gradient(top, #2384d3, #15497c);
+  background-image: linear-gradient(to bottom, #2384d3, #15497c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2384d3', endColorstr='#ff15497c', GradientType=0);
+  border-color: #15497c #15497c #0a223b;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #15497c;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.adminlist .data_refresh a span.nnem_button:hover,
+.adminlist .data_refresh a span.nnem_button:active,
+.adminlist .data_refresh a span.nnem_button.active,
+.adminlist .data_refresh a span.nnem_button.disabled,
+.adminlist .data_refresh a span.nnem_button[disabled] {
+  color: #ffffff;
+  background-color: #15497c;
+  *background-color: #113c66;
+}
+.adminlist .data_refresh a span.nnem_button:active,
+.adminlist .data_refresh a span.nnem_button.active {
+  background-color: #0e2f50 \9;
+}
+.all_installselected a span.nnem_button,
+.data_install a span.nnem_button {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #49afcd;
+  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+  border-color: #2f96b4 #2f96b4 #1f6377;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #2f96b4;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.all_installselected a span.nnem_button:hover,
+.data_install a span.nnem_button:hover,
+.all_installselected a span.nnem_button:active,
+.data_install a span.nnem_button:active,
+.all_installselected a span.nnem_button.active,
+.data_install a span.nnem_button.active,
+.all_installselected a span.nnem_button.disabled,
+.data_install a span.nnem_button.disabled,
+.all_installselected a span.nnem_button[disabled],
+.data_install a span.nnem_button[disabled] {
+  color: #ffffff;
+  background-color: #2f96b4;
+  *background-color: #2a85a0;
+}
+.all_installselected a span.nnem_button:active,
+.data_install a span.nnem_button:active,
+.all_installselected a span.nnem_button.active,
+.data_install a span.nnem_button.active {
+  background-color: #24748c \9;
+}
+.all_updateall a span.nnem_button,
+.data_update a span.nnem_button {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #faa732;
+  background-image: -moz-linear-gradient(top, #fbb450, #f89406);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fbb450), to(#f89406));
+  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+  background-image: -o-linear-gradient(top, #fbb450, #f89406);
+  background-image: linear-gradient(to bottom, #fbb450, #f89406);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
+  border-color: #f89406 #f89406 #ad6704;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #f89406;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.all_updateall a span.nnem_button:hover,
+.data_update a span.nnem_button:hover,
+.all_updateall a span.nnem_button:active,
+.data_update a span.nnem_button:active,
+.all_updateall a span.nnem_button.active,
+.data_update a span.nnem_button.active,
+.all_updateall a span.nnem_button.disabled,
+.data_update a span.nnem_button.disabled,
+.all_updateall a span.nnem_button[disabled],
+.data_update a span.nnem_button[disabled] {
+  color: #ffffff;
+  background-color: #f89406;
+  *background-color: #df8505;
+}
+.all_updateall a span.nnem_button:active,
+.data_update a span.nnem_button:active,
+.all_updateall a span.nnem_button.active,
+.data_update a span.nnem_button.active {
+  background-color: #c67605 \9;
+}
+.none_uninstall a span.nnem_button {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #da4f49;
+  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+  border-color: #bd362f #bd362f #802420;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #bd362f;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.none_uninstall a span.nnem_button:hover,
+.none_uninstall a span.nnem_button:active,
+.none_uninstall a span.nnem_button.active,
+.none_uninstall a span.nnem_button.disabled,
+.none_uninstall a span.nnem_button[disabled] {
+  color: #ffffff;
+  background-color: #bd362f;
+  *background-color: #a9302a;
+}
+.none_uninstall a span.nnem_button:active,
+.none_uninstall a span.nnem_button.active {
+  background-color: #942a25 \9;
+}
+span.current_version span.nnem_button,
+span.new_version span.nnem_button {
+  min-width: 36px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+span.free_installed > span.nnem_button,
+span.pro_no_access > span.nnem_button,
+span.pro_installed > span.nnem_button,
+span.pro_access > span.nnem_button {
+  background-color: #2f96b4;
+  min-width: 30px;
+}
+span.pro_installed > span.nnem_button,
+span.pro_access > span.nnem_button {
+  background-color: #51a351;
+}
+tr.update span.new_version span.nnem_button {
+  background-color: #f89406;
+}
+span.group_error span.nnem_button,
+span.comment_update span.nnem_button,
+span.comment_missing span.nnem_button,
+span.comment_pro_no_access span.nnem_button,
+span.comment_old span.nnem_button {
+  background-color: #fbb450;
+  padding-left: 28px;
+  background: transparent url(../images/warning.png) no-repeat 5px 2px;
+}
+span.group_error span.nnem_button,
+span.group_comment span.nnem_button {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: #333333;
+}
+span.group_error span.nnem_button {
+  background-color: #eeeeee;
+  font-weight: bold;
+}
+span.group_all_ghosted span.nnem_button {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+progress.loading {
+  height: 9px;
+  width: 100%;
+}
+div.clr {
+  clear: both;
+}
+/* Tooltips */
+.changlog-tip {
+  max-width: none !important;
+}
+/* Modal */
+#sbox-window.nnem_modal {
+  padding: 0;
+}

@@ -1,0 +1,205 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Sliders
+ * @version         3.3.1
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2013 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+@import "../../nnframework/less/init.less";
+
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/sliders/style.min.css
+ */
+
+div.nn_sliders_container {
+	margin-bottom: 18px;
+}
+
+div.nn_sliders_slider {
+	display: block;
+	clear: left;
+	margin: 2px 0 0 0 !important;
+	padding: 0;
+	line-height: 1em;
+	background: none;
+
+	// Slides
+	a,
+	a:link,
+	a:visited,
+	a:active,
+	a:hover {
+		outline: 0;
+		line-height: 1.5em !important;
+		text-decoration: none !important;
+		.transition-duration(.2s);
+	}
+
+	a,
+	a:hover {
+		display: block;
+		width: auto;
+		_width: 0%; // IE hack
+		border: solid 1px #e5e5e5;
+		.border-radius(4px);
+		padding: 8px 15px;;
+	}
+
+	@bgcolor: @btnPrimaryBackground;
+	// Hover state
+	a:hover {
+		background-color: @grayLighter;
+	}
+	// Active state
+	&.active a,
+	&.active a:hover {
+		background-color: lighten(@grayLighter, 4%);
+		.border-radius(4px 4px 0 0);
+	}
+}
+
+// Content area
+div.nn_sliders_content_wrapper,
+div.nn_sliders_content_wrapper > div,
+div.nn_sliders_content_wrapper div.nn_sliders_content,
+div.nn_sliders_content_wrapper div.nn_sliders_content > div,
+div.nn_sliders_content_wrapper div.nn_sliders_item {
+	position: relative !important;
+	overflow: hidden !important;
+}
+
+div.nn_sliders_content_wrapper {
+	clear: left;
+	margin-top: -1px;
+	padding: 0;
+	div.nn_sliders_content {
+		clear: both;
+		padding: 0;
+		border: 1px solid #e5e5e5;
+		.border-radius(0 0 4px 4px);
+		padding: 9px 15px;
+	}
+}
+
+// STYLING FOR IF JAVASCRIPT FAILS
+div.nn_sliders_noscript {
+	div.nn_sliders_content,
+	div.nn_sliders_item {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+}
+
+div.nn_sliders_slider {
+	// Classes: Normal state + Hover state
+	&.blue a,
+	&.green a,
+	&.red a,
+	&.orange a,
+	&.gray a,
+	&.grey a,
+	&.primary a,
+	&.info a,
+	&.success a,
+	&.danger a,
+	&.warning a {
+		border-top: 5px solid #e5e5e5;
+		.border-radius(5px 5px 4px 4px);
+	}
+
+	// Style: blue / primary
+	@bgcolor_blue: @btnPrimaryBackground;
+	// Normal state
+	&.blue a,
+	&.primary a {
+		border-top-color: lighten(@bgcolor_blue, 20%);
+	}
+	// Hover state + Active state
+	&.blue a:hover,
+	&.blue.active a,
+	&.primary a:hover,
+	&.primary.active a {
+		border-top-color: @bgcolor_blue;
+	}
+
+	// Style: info
+	@bgcolor_info: @btnInfoBackgroundHighlight;
+	// Normal state
+	&.info a {
+		border-top-color: lighten(@bgcolor_info, 20%);
+	}
+	// Hover state + Active state
+	&.info a:hover,
+	&.info.active a {
+		border-top-color: @bgcolor_info;
+	}
+
+	// Style: green / success
+	@bgcolor_green: @btnSuccessBackgroundHighlight;
+	// Normal state
+	&.green a,
+	&.success a {
+		border-top-color: lighten(@bgcolor_green, 20%);
+	}
+	// Hover state + Active state
+	&.green a:hover,
+	&.green.active a,
+	&.success a:hover,
+	&.success.active a {
+		border-top-color: @bgcolor_green;
+	}
+
+	// Style: orange / warning
+	@bgcolor_orange: @btnWarningBackgroundHighlight;
+	// Normal state
+	&.orange a,
+	&.warning a {
+		border-top-color: lighten(@bgcolor_orange, 20%);
+	}
+	// Hover state + Active state
+	&.orange a:hover,
+	&.orange.active a,
+	&.warning a:hover,
+	&.warning.active a {
+		border-top-color: @bgcolor_orange;
+	}
+
+	// Style: red / danger / error
+	@bgcolor_red: @btnDangerBackgroundHighlight;
+	// Normal state
+	&.red a,
+	&.danger a,
+	&.error a {
+		border-top-color: lighten(@bgcolor_red, 20%);
+	}
+	// Hover state + Active state
+	&.red a:hover,
+	&.red.active a,
+	&.danger a:hover,
+	&.danger.active a,
+	&.error a:hover,
+	&.error.active a {
+		border-top-color: @bgcolor_red;
+	}
+
+	// Style: gray / grey
+	@bgcolor_grey: #808080;
+	// Normal state
+	&.gray a,
+	&.grey a {
+		border-top-color: lighten(@bgcolor_grey, 20%);
+	}
+	// Hover state + Active state
+	&.gray a:hover,
+	&.gray.active a,
+	&.grey a:hover,
+	&.grey.active a {
+		border-top-color: @bgcolor_grey;
+	}
+}
